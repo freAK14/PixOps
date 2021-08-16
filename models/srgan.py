@@ -8,7 +8,7 @@ from tensorflow.python.keras.layers import Add, BatchNormalization, Conv2D, Dens
 from tensorflow.python.keras.models import Model
 from tensorflow.python.keras.applications.vgg19 import VGG19
 
-from model_utils import pixel_shuffle
+from model_utils import pixel_shuffle, normalize_021, normalize_121, denormalize_121
 
 LR_SIZE = 24
 HR_SIZE = 96
@@ -18,3 +18,6 @@ def upsample(x_in, num_filters):
     x = Lambda(pixel_shuffle(scale = 2))(x)
     return PReLU(shared_axes=[1, 2])(x)
 
+def sr_resnet(num_filters = 64, num_res_blocks = 16):
+    x_in = Input(shape=(None, None, 3))
+    x = Lambda(normalize_021)(x_in)
