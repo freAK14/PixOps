@@ -8,7 +8,7 @@ from tensorflow.python.keras.layers import Add, BatchNormalization, Conv2D, Dens
 from tensorflow.python.keras.models import Model
 from tensorflow.python.keras.applications.vgg19 import VGG19
 
-from model_utils import pixel_shuffle, normalize_021, normalize_121, denormalize_121
+from models.model_utils import pixel_shuffle, normalize_021, normalize_121, denormalize_121
 
 LR_SIZE = 24
 HR_SIZE = 96
