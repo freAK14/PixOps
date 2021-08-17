@@ -10,7 +10,7 @@ import tensorflow as tf
 DIV2K_RGB_MEAN = np.array([0.4488, 0.4371, 0.4040]) * 255
 
 '''#######################
-       Utils Functions
+      Utility Functions
    #######################'''
 
 def resolve(model, lr_batch):
@@ -19,7 +19,6 @@ def resolve(model, lr_batch):
     sr_batch = tf.clip_by_value(sr_batch, 0, 255)
     sr_batch = tf.round(sr_batch)
     sr_batch = tf.cast(sr_batch, tf.uint8)
-    
     return sr_batch
 
 def resolve_single(model, lr):
@@ -31,7 +30,6 @@ def evaluate(model, dataset):
         sr = resolve(model, lr)
         psnr_value = psnr(hr, sr)[0]
         psnr_values.append(psnr_value)
-    
     return tf.reduce_mean(psnr_values)
 
 def pixel_shuffle(scale):
@@ -64,10 +62,3 @@ def denormalize_121(x):
    #######################'''
 def psnr(x1, x2):
     return tf.image.psnr(x1, x2, max_val=255)
-
-'''#######################
-       Utils Functions
-   #######################'''  
-   
-def pixel_shuffle(scale):
-    return lambda x: tf.nn.depth_to_space(x, scale)
