@@ -1,7 +1,7 @@
 import time
 import tensorflow as tf
 
-from models import evaluate
+from models.model_utils import evaluate
 from models import srgan
 
 from tensorflow.keras.applications.vgg19 import preprocess_input
