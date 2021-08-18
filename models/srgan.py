@@ -31,7 +31,7 @@ def sr_resnet(num_filters=64, num_res_blocks=16):
     x_in = Input(shape=(None, None, 3))
     x = Lambda(normalize_021)(x_in)
     
-    x = Conv2D(num_filters, kernel_size=9, padding='same')
+    x = Conv2D(num_filters, kernel_size=9, padding='same')(x)
     x = x_1 = PReLU(shared_axes=[1, 2])(x)
     
     for _ in range(num_res_blocks):
