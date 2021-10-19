@@ -1,0 +1,112 @@
+* {
+  font-family: "Segoe UI";
+  color: #002456;
+}
+
+body {
+  height: 100%;
+}
+
+.main-card {
+  height: 80vh;
+  width: 75vw;
+  border-radius: 45px;
+  background-color: white;
+  margin: auto;
+}
+
+.main-card .inside-main-card .left {
+  height: 80%;
+}
+
+.main-card .inside-main-card .left .form {
+  padding: 20px;
+}
+
+.main-card .inside-main-card .left .form .login-register {
+  font-weight: 400;
+  letter-spacing: 2px;
+}
+
+.main-card .inside-main-card .left .form input {
+  border-top: 0;
+  border-left: 0;
+  border-right: 0;
+}
+
+.main-card .inside-main-card .left .form input::-webkit-input-placeholder {
+  color: #5680E9;
+  opacity: 50%;
+  font-size: 1.2em;
+  letter-spacing: 2px;
+}
+
+.main-card .inside-main-card .left .form input:-ms-input-placeholder {
+  color: #5680E9;
+  opacity: 50%;
+  font-size: 1.2em;
+  letter-spacing: 2px;
+}
+
+.main-card .inside-main-card .left .form input::-ms-input-placeholder {
+  color: #5680E9;
+  opacity: 50%;
+  font-size: 1.2em;
+  letter-spacing: 2px;
+}
+
+.main-card .inside-main-card .left .form input::placeholder {
+  color: #5680E9;
+  opacity: 50%;
+  font-size: 1.2em;
+  letter-spacing: 2px;
+}
+
+.main-card .inside-main-card .left .form .submit-btn {
+  font-size: 2em;
+  background-color: #5680E9;
+  color: white;
+  width: 95%;
+  border-radius: 15px;
+  padding: 3px;
+  -webkit-transition: ease-in 0.1s;
+  transition: ease-in 0.1s;
+}
+
+.main-card .inside-main-card .left .form .submit-btn:hover {
+  opacity: 80%;
+  padding: 5px;
+  width: 98%;
+}
+
+.main-card .inside-main-card .right {
+  border-radius: 45px;
+  padding: 0;
+  height: 80%;
+}
+
+.main-card .inside-main-card .right img {
+  margin: 0 !important;
+}
+
+.main-card .inside-main-card .right .description {
+  text-align: center;
+  padding: 10px;
+}
+
+.main-card .inside-main-card .right .description .main-text {
+  font-size: 2em;
+}
+
+.main-card .inside-main-card .right .description .sub-text {
+  font-size: 1.5em;
+  letter-spacing: 2px;
+  color: #64B9EE;
+  margin: 0;
+}
+
+.row {
+  margin-left: 0;
+  margin-right: 0;
+}
+/*# sourceMappingURL=login_register.css.map */

@@ -28,4 +28,4 @@ class super_resolution:
         #plt.imshow(sr)
         #plt.savefig("./demo_images/op.png")
         pil_img = tf.keras.preprocessing.image.array_to_img(sr)
-        pil_img.save('./demo_images/op.png')
+        pil_img.save('./static/generated/superImage.png')
