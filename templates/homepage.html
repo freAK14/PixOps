@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+    <link rel="stylesheet" href="../static/stylesheets/homepage.css">
+    <title>PixOps - Home Page</title>
+</head>
+<body>
+
+    <div class="cursor" id="cursor">
+        <div class="inside-cursor"></div>
+    </div>
+
+    <div class="main-container" id="main_container">
+
+        <div class="main-cover"></div>
+
+        <div class="navbar">
+            <div class="container">
+
+                <span> <img class="img-fluid logo" src="../static/images/PixOps-Logo.png" alt=""></span>
+
+                <div class="menu-items">
+
+                    <ul>
+                        <li><a href="#home"> Home </a> </li>
+                        <li><a href="#mod1"> Module 1 </a> </li>
+                        <li><a href="#mod2"> Module 2 </a> </li>
+                        <li><a href="#mod3"> Module 3 </a> </li>
+                        <li><a href="#about"> About </a> </li>
+                        
+                    </ul>
+                    <progress max="100" value="0" class="progressBar" ></progress>
+                    
+                    
+                </div>
+                <a href="/logout" class="btn btn-danger"> Log Out </a> 
+
+            </div>
+        </div>
+           
+        <div class="mod home mt-5" id="home">
+        
+            <div class="content  ">
+                
+                <div class="row mt-5 content-container ">
+
+                <div class="left-text col my-auto ml-5"> 
+                    <h2 class="display-2"> 
+                        <span class="text-span">   Images Are   </span>
+                    </h2>
+                    <h2 class="display-2">
+                        <span class="text-span">   The Beauty Of </span>
+                    </h2>
+                    <h2 class="display-2">
+                        <span class="text-span">  Life, Captured </span>
+                    </h2>
+                    <br>
+                    <span class="  explore-btn mt-2"><a href="#mod1"> Explore ! </a></span>
+                    
+                </div>
+                
+                <div class="right-home col">
+                    <div class="right-home-inner" id="parallax">
+                    <img class="img-fluid parallax-img" id = "parallax-img-1" src="../static/images/shapes/shapes1.png" alt="">
+                    <img class="img-fluid parallax-img" id = "parallax-img-2" src="../static/images/shapes/shapes2.png" alt="">
+                    <img class="img-fluid parallax-img" id = "parallax-img-3" src="../static/images/shapes/shapes3.png" alt="">
+                    </div>
+                </div>
+                
+                </div> 
+            
+            </div>
+        
+        </div>
+
+        <div class="mod mod1" id="mod1">
+                <div class="mod-cover mod1-cover" ></div>
+                
+                <div class="content container ">
+                    
+                    <h2 class="display-1 module-heading">Super Resolution</h2>
+                
+                    <div class="row mt-5 content-container ">
+
+                    <div class="left-text col my-auto">
+
+                        <p class="module-description mod1-desc">
+                            Image super resolution can be defined as increasing the size of small 
+                            images while keeping the drop in quality to minimum, or restoring high 
+                            resolution images from rich details obtained from low resolution images.    
+                        </p>
+                        <button class="btn btn-lg btn-info know-more-btn" onclick="knowMore('super')" >Know More !</button>
+                        <div class="mt-2" id="super" style="display: none;">
+                           <p>
+                               The key idea is to obtain the super-resolved image from observed low-resolution images.
+                               The super-resolution (SR) technique reconstructs a high-resolution image from single or multiple low-resolution images.
+                            </p>
+                        </div>
+                        <br>
+                        <button class="btn btn-lg btn-outline-success mod1-btn mt-2" onclick="location.href='/super-resolution';">Take Me There !</button>
+                        
+                    </div>
+                    
+                    <div class="right-img col">
+                        <div class="d-flex">
+                            <img class="img-fluid mx-auto mod1-img" src="../static/images/mod1_org.png" alt="">
+                            <div class="hover-div mod1-hover img-fluid">
+                                <span class="">HOVER OVER ME</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    </div> 
+                
+                </div>
+            
+        </div>
+    
+        <div class="mod mod2" id="mod2">
+            <div class="mod-cover mod2-cover" ></div>
+            <div class="mod-cover mod2-cover2" ></div>
+
+            <div class="content container ">
+                
+                <h2 class="display-1 module heading">Colorization</h2>
+            
+                <div class="row mt-5 content-container ">
+
+                <div class="left-text col my-auto">
+
+                    <p class="module-description mod2-desc">
+                        The process of Colourization adds color to grayscale image by making them more lively and enchanting !                    </p>
+                    <br>
+                    <button class="btn mod2-btn mt-2" onclick="location.href='/colorisation';">Take Me There !</button>
+                    
+                </div>
+                
+                <div class="right-img col">
+                    <div class="d-flex mod2-right">
+                        <img class="img-fluid mx-auto mod2-img" src="../static/images/bw.jpeg" alt="">
+                        <div class="hover-div mod2-hover">
+                            <span class="">HOVER OVER ME</span>
+                        </div>
+                    </div>
+                </div>
+                
+                </div> 
+            
+            </div>
+        
+        </div>
+
+        <div class="mod mod3" id="mod3">
+            
+            <div class="mod-cover mod1-cover" ></div>
+
+            <div class="content container ">
+                
+                <h2 class="display-1 module heading">Domain Transfer</h2>
+            
+                <div class="row mt-5 content-container ">
+
+                <div class="left-text col my-auto">
+
+                    <p class="module-description mod3-desc">
+                        Domain transfer is the task of changing the style of an image in one domain to the style of an image in another domain.                    </p>
+                    <br>
+                    <button class="btn mod3-btn mt-2" onclick="location.href='/style-transfer';">Take Me There !</button>
+                    
+                </div>
+                
+                <div class="right-img col">
+                    <div class="d-flex">
+                        <img class="img-fluid mx-auto mod3-img" src="../static/generated/styleImage.png" alt="">
+                        <div class="hover-div mod3-hover">
+                            <span class="">HOVER OVER ME</span>
+                        </div>
+                    </div>
+                </div>
+                
+                </div> 
+            
+            </div>
+        
+        </div>
+
+        <div class="mod about" id="about">
+        
+            <div class="content container ">
+                
+                <h2 class="display-1 module heading">About</h2>
+            
+                <div class="row mt-5 content-container ">
+
+                <div class="left-text col my-auto">
+
+                    <p class="about-desc">
+                        This project was developed by the students of G. H. Raisoni College Of Engeneering,
+                        as a final year project.This project was a result of 4 months of hardwork, and zeal 
+                        for artificial intelligence.
+                    </p>
+                    <br>
+                    <button class="btn btn-lg btn-outline-success about-btn mt-2">Read More About us !</button>
+                    
+                </div>
+                
+                <div class="right-about col">
+                    <div class="">
+                        <p class="display-4 author"> Akash Kothare</p>
+                        <p class="display-4 author"> ManC Danao</p>
+                        <p class="display-4 author"> Shridhara Chaube</p>
+                        <p class="display-4 author"> Yash Moharir</p>
+                    </div>
+                </div>
+                
+                </div> 
+            
+            </div>
+        
+        </div>
+
+    </div>
+        
+
+    </div>
+ 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.8.0/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.8.0/ScrollTrigger.min.js"></script>
+
+    <script>
+
+        var cursor = document.getElementById("cursor");
+        var container = document.getElementById("main_container");
+        var parallax_div = document.getElementById("parallax");
+        var paraimage = document.getElementById("parallax-img-1");
+        var paraimage2 = document.getElementById("parallax-img-2");
+        var paraimage3 = document.getElementById("parallax-img-3");
+
+       
+        
+        parallax_div.addEventListener("mouseenter",function(e){
+            paraimage.style.animation= "none";
+            paraimage2.style.animation= "none";
+            paraimage3.style.animation= "none";
+        })
+        parallax_div.addEventListener("mouseleave",function(e){
+            paraimage.style.animation= "hower 2s infinite";
+            paraimage2.style.animation= "hower 2s infinite";
+            paraimage3.style.animation= "hower 2s infinite";
+        })
+        
+        parallax_div.addEventListener("mousemove",function(e){
+            paraimage.style.top =this.style.width- e.pageY*0.1 + "px" ;
+            paraimage.style.left =this.style.height- e.pageX*0.05 + "px" ;
+            paraimage2.style.top =this.style.width- e.pageY*0.1 + "px" ;
+            paraimage2.style.left =this.style.height- e.pageX*0.15 + "px" ;
+            paraimage3.style.top =this.style.width- e.pageY*0.15 + "px" ;
+            paraimage3.style.left =this.style.height- e.pageX*0.1 + "px" ;
+        })
+        container.addEventListener("mousemove",function(e){
+            cursor.style.top = e.pageY + "px" ;
+            cursor.style.left = e.pageX + "px" ;
+        })
+
+        function knowMore(id){
+            var ele = document.getElementById(id);
+            gsap.to(ele,{display:"block", duration:0.1})
+            gsap.from(ele,{x:-200, opacity:0, duration:2})
+        }
+//
+// Launch Animation
+        launchTL = gsap.timeline();
+        launchTL.to('.main-cover',{y:"-100%",duration:1})  //uncomment this
+        .from('.navbar',{y:"-100%",duration:1})
+        .from('.text-span',{opacity:0,duration:1,stagger:0.3})
+        .from('.explore-btn',{width:"0%",opacity:0,duration:1})
+        .from('.right-home',{x:"100%",duration:0.6})
+        .from('.right-home img',{opacity:0,duration:0.6})
+
+        gsap.to('progress', {
+        value: 100,
+        ease: 'none',
+        scrollTrigger: { scrub: 0.3 ,
+        scroller:".main-container" }
+        });
+
+        const tl = gsap.timeline({
+            scrollTrigger : {
+                trigger : ".mod1",
+                scroller:".main-container", 
+                toggleActions: 'play restart restart restart'
+            }
+        });
+
+        tl.from(".mod1-desc" , { x:-200 ,opacity :0,fontSize:0, duration : 2 })
+        .from(".mod1-img" ,{x:200 ,opacity:0 , duration: 1})
+        // .from(".mod1-cover" ,{x: -500, opacity:0, duration: 1})
+        .from(".know-more-btn" ,{x: -500, opacity:0, duration: 1},"-=1")
+        .from(".mod1-btn" ,{x: -500, opacity:0, duration: 1},"-=0.7")
+        .from(".mod1-hover" ,{y: 200, opacity:0,duration: 0.5})
+
+        /////////////////////
+
+        const tl2 = gsap.timeline({
+            scrollTrigger : {
+                trigger : ".mod2",
+                scroller:".main-container",
+                start: "top",
+                toggleActions: 'play restart restart restart'
+            }
+        });
+
+        tl2.from(".mod2-desc" , { x:-200 ,opacity :0,fontSize:0, duration : 2 })
+        .from(".mod2-img" ,{x:200 ,opacity:0 ,duration: 1})
+        .from(".mod2-cover" ,{x: -500, opacity:0, duration: 1}, "-=0.5")
+        .from(".mod2-cover2" ,{x: -500, opacity:0, duration: 1},"-=0.5")
+        .from(".mod2-btn" ,{x: -500, opacity:0, duration: 1},"-=1")
+        .from(".mod2-hover" ,{y: 200, opacity:0, duration: 0.5})
+
+/////////////////
+
+        const tl3 = gsap.timeline({
+            scrollTrigger : {
+                trigger : ".mod3",
+                scroller:".main-container", 
+                start: "top bottom",
+                toggleActions: 'play restart restart restart'
+            }
+        });
+
+        tl3.from(".mod3-desc" , { x:-200 ,opacity :0,fontSize:0, duration : 2 })
+        .from(".mod3-img" ,{x:200 ,opacity:0 ,duration: 1})
+        // .from(".mod3-cover" ,{x: -500, opacity:0, duration: 1})
+        // .from(".mod3-cover2" ,{x: -500, opacity:0, duration: 1})
+        .from(".mod3-btn" ,{x: -500, opacity:0, duration: 1},"-=1")
+        .from(".mod3-hover" ,{y: 200, opacity:0, duration: 0.5})
+
+        /////////////////
+
+        const tl4 = gsap.timeline({
+            scrollTrigger : {
+                trigger : ".about",
+                scroller:".main-container",
+                start: "top",
+                toggleActions: 'play restart restart restart'
+            }
+        });
+
+        tl4.from(".about-desc" , { x:-200 ,opacity :0, duration : 1 })
+        .from(".author" ,{x:200 ,opacity:0 ,stagger:0.2,duration: 1}, "-=0.3")
+        .from(".about-btn" ,{x: -500, opacity:0, duration: 1},"-=1")
+
+ 
+    </script>
+</body>
+</html>

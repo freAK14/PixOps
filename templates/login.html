@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Bootstrap CSS -->
+ 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+ 
+    
+		<link rel="stylesheet" href="{{ url_for('static', filename='stylesheets/login_register.css') }}">
+    <style>
+        body{
+            background-color: #8CBCFF ;
+        }
+
+        .main-card{
+            box-shadow: 42px 42px 32px #0d4fac6b , 20px 22px 22px #1f4c8a6b;
+        }
+
+        .right{
+            background-color: #016bff31;
+        }
+    </style>
+
+    <title>Login</title>
+</head>
+<body>
+    
+    <div class="main-card container  p-4 mt-5" >
+
+        <div class="inside-main-card container-fluid  row">
+
+            <div class="left  col-md-6    ">
+
+                <form action="" method="POST" class="form">
+
+                    <h1 class="login-register">Login</h1>
+
+                    <input type="text" name="username" class="form-control mt-4" id="username" placeholder="Username">
+                    <input type="password" name="password" class="form-control mt-4" id="password" placeholder="Password">
+                    <div class="d-flex">
+                        <button type="submit" class="btn submit-btn mt-4 mx-auto text-center">Let's Go !!</button>
+
+                    </div>
+                    
+                    <h3>{{msg}}</h3>
+                    <p class="lead mt-2">New User? <a href="{{url_for('register')}}">Register Here !</a></p>
+                    <p class="lead" style="font-size: small;"> you agree to all the terms and condtions by registering</p>
+                    <h6 class="lead" style="font-size: medium;"> {{msg}}</h6>
+                </form>
+
+            </div>
+
+            <div class="right col-md-5 offset-md-1  ">
+
+                <img src="../static/images/shapes1.png" alt="shapes" class="img-fluid" >
+
+                <div class="description">
+                    <h1 class="main-text">SUPER RESOLUTION</h1>
+                    <p class="sub-text">SEE CLEARLY, SEE MORE</p>
+                    
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+</body>
+</html>
